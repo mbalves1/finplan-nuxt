@@ -1,3 +1,3 @@
 <template>
- PAgina 1
+  page1
 </template>

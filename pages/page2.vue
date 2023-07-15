@@ -1,3 +1,3 @@
 <template>
-  ola
+  pagin 2
 </template>
