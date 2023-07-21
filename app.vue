@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: #B5C2CA;">
+  <v-app style="background: #B5C2CA;" class="app">
     <v-row style="max-width: 1200px; width: 100%; margin: auto; background: #B5C2CA;">
       <v-row class="my-10">
         <v-card
@@ -42,7 +42,9 @@
             </v-list>
           </v-card-item>
         </v-card>
-        <v-main class="d-flex">
+        <v-main class="d-flex flex-column">
+          <Search></Search>
+
           <NuxtPage />
         </v-main>
       </v-row>
@@ -54,7 +56,7 @@
 export default {
   data: () => ({
     items: [
-      { text: 'Home', icon: 'mdi-view-dashboard', link: '/home' },
+      { text: 'Home', icon: 'mdi-view-dashboard', link: '/' },
       { text: 'Add', icon: 'mdi-credit-card-plus', link: '/page1' },
       { text: 'Dashboard', icon: 'mdi-finance', link: '/page2' },
     ],
@@ -62,6 +64,11 @@ export default {
 }
 </script>
 <style>
+.app {
+  padding: 0px;
+  margin: 0px;
+}
+
 .title {
   font-family: 'Montserrat', sans-serif;
 }
