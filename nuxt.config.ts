@@ -3,9 +3,23 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     // ...
-    '@pinia/nuxt',
+    ['@pinia/nuxt',
+      {
+        autoImportsimport: ['defineStore']
+      }
+    ],
     '@nuxtjs/google-fonts'
   ],
+  imports: {
+    dirs: ['store'],
+  },
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
+  },
   build: {
     transpile: ['vuetify'],
   },

@@ -17,8 +17,6 @@
               density="compact"
               nav
               bg-color="#F0F3F4"
-              active-color="black"
-              base-color="black"
               >
               
               <v-list-item
