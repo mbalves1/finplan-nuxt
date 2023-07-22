@@ -22,7 +22,7 @@
         <v-sheet class="wrapper--list">
           <ListRelease></ListRelease>
 
-          <TableRelease></TableRelease>
+          <!-- <TableRelease></TableRelease> -->
         </v-sheet>
       </v-col>
     </v-row>
