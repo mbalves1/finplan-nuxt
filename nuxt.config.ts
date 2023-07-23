@@ -8,10 +8,14 @@ export default defineNuxtConfig({
         autoImportsimport: ['defineStore']
       }
     ],
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
   imports: {
-    dirs: ['store'],
+    dirs: [
+      'store',
+      'composables',
+      'composables/*/index.{ts,js,mjs,mts}',
+    ],
   },
   pinia: {
     autoImports: [

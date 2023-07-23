@@ -75,5 +75,9 @@ export default {
   text-decoration: none !important;
 }
 
+.fs-10 {
+  font-size: 10px;
+}
+
 </style>
 

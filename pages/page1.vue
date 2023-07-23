@@ -2,10 +2,11 @@
   <v-container class=" mt-6">
     <v-row class="wrapper rounded-xl">
       <v-col class="pa-5">
-        <v-sheet class="d-flex" style="">
+        <v-sheet class="d-flex px-5" style="">
           <v-sheet class="me-auto">
-            <h2>Last releases</h2>
-            <p>117 proceed</p>
+            <p><strong>Total balance</strong></p>
+            <h2 class="ml-5">{{ formatCurrency(balance) }}</h2>
+            <p class="fs-10">Number of financial postings {{ len }}</p>
           </v-sheet>
           <v-sheet class="mx-2">
             <h3>In</h3>
@@ -17,10 +18,13 @@
           </v-sheet>
         </v-sheet>
 
-        <v-divider class="my-5"></v-divider>
+        <v-divider class="mt-5 mb-1"></v-divider>
 
         <v-sheet class="wrapper--list">
-          <ListRelease></ListRelease>
+          <ListRelease
+            @total="totalBalance"
+            @releaseLenght="releaseLenght">
+          </ListRelease>
 
           <!-- <TableRelease></TableRelease> -->
         </v-sheet>
@@ -42,6 +46,16 @@ export default {
     textfield: null,
     model: true
   }),
+  setup() {
+    const balance = ref(0);
+    const len = ref(0);
+
+    const totalBalance = (valor) => balance.value = valor
+
+    const releaseLenght = (valor) => len.value = valor
+
+    return { totalBalance, balance, releaseLenght, len }
+  }
 }
 </script>
 <style scoped lang="scss">
