@@ -19,7 +19,6 @@
         mdi-delete
       </v-icon>
     </v-list-item>
-
   </v-list>
 </template>
 <script setup>

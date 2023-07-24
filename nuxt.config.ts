@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     ],
   },
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify', 'chart.js'],
   },
   googleFonts: {
     families: {
